@@ -8,8 +8,8 @@ import { Analytics } from "@vercel/analytics/react";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "ImaginoSkatch",
-  description: "ImaginoSkatch",
+  title: "ImaginoSketch",
+  description: "ImaginoSketch",
   authors: [{ name: "fal.ai", url: "https://fal.ai" }],
   metadataBase: new URL("https://fastsdxl.ai"),
   openGraph: {
