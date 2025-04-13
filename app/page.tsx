@@ -125,9 +125,57 @@ export default function Lightning() {
                 </div>
               )}
               <div className="md:min-h-[512px] max-w-fit">
-                {image && (
-                  <img id="imageDisplay" src={image} alt="Dynamic Image" />
-                )}
+              {image && (
+              <>
+                <img id="imageDisplay" src={image} alt="Dynamic Image" />
+
+                <div className="mt-4 space-y-2 text-center">
+                  <div className="flex justify-center gap-2 flex-wrap">
+                    <select id="imageSize" className="border px-2 py-1 rounded">
+                      <option value="256">256 x 256</option>
+                      <option value="512">512 x 512</option>
+                      <option value="768">768 x 768</option>
+                      <option value="1024">1024 x 1024</option>
+                    </select>
+
+                    <select id="imageFormat" className="border px-2 py-1 rounded">
+                      <option value="png">PNG</option>
+                      <option value="jpeg">JPEG</option>
+                    </select>
+
+                    <button
+                      onClick={() => {
+                        const imgElement = document.getElementById("imageDisplay") as HTMLImageElement;
+                        const size = parseInt((document.getElementById("imageSize") as HTMLSelectElement).value);
+                        const format = (document.getElementById("imageFormat") as HTMLSelectElement).value;
+
+                        const canvas = document.createElement("canvas");
+                        canvas.width = size;
+                        canvas.height = size;
+                        const ctx = canvas.getContext("2d");
+                        if (!ctx || !imgElement) return;
+
+                        const img = new Image();
+                        img.crossOrigin = "anonymous"; 
+                        img.src = imgElement.src;
+
+                        img.onload = () => {
+                          ctx.drawImage(img, 0, 0, size, size);
+                          const link = document.createElement("a");
+                          link.href = canvas.toDataURL(`image/${format}`);
+                          link.download = `image_${size}x${size}.${format}`; 
+                          link.click();
+                        };
+                      }}
+                      className="bg-yellow-700 text-white px-4 py-2 rounded hover:bg-blue-700"
+                    >
+                      Download Image
+                    </button>
+                  </div>
+                </div>
+              </>
+            )}
+
               </div>
             </div>
           </div>

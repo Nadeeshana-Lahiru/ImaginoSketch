@@ -19,7 +19,7 @@ export function Nav() {
         <Link href="/">
           <h1 className={cn("font-light text-xl", spaceMono.className)}>
             <span className="text-yellow-400">Imagino</span>
-            <span>Skatch</span>
+            <span>Sketch</span>
             <span className="text-gray-700"> ...Enter your Promt here - Get the Skatch quick fire... </span>
           </h1>
         </Link>
