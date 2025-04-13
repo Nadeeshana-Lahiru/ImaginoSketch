@@ -18,13 +18,13 @@ export function Nav() {
       <div className="flex flex-1 items-center">
         <Link href="/">
           <h1 className={cn("font-light text-xl", spaceMono.className)}>
-            <span className="text-yellow-400">Imagino</span>
+            <span className="text-yellow-400 ml-10">Imagino</span>
             <span>Sketch</span>
-            <span className="text-gray-700"> ...Type It - See It - Create Magic in Seconds... </span>
+            <span className="text-gray-700 ml-48"> ...Type It 💡 See It 🎨 Create Magic in Seconds 🌟 ... </span>
           </h1>
         </Link>
       </div>
-      <div className="flex flex-none items-center space-x-4">
+      <div className="flex flex-none items-center space-x-4 mr-10">
         <ThemeToggle />
       </div>
     </div>

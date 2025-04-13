@@ -132,10 +132,10 @@ export default function Lightning() {
                 <div className="mt-4 space-y-2 text-center">
                   <div className="flex justify-center gap-2 flex-wrap">
                     <select id="imageSize" className="border px-2 py-1 rounded">
-                      <option value="256">256 x 256</option>
-                      <option value="512">512 x 512</option>
-                      <option value="768">768 x 768</option>
-                      <option value="1024">1024 x 1024</option>
+                      <option value="256">256 x 256 Pxl</option>
+                      <option value="512">512 x 512 Pxl</option>
+                      <option value="768">768 x 768 Pxl</option>
+                      <option value="1024">1024 x 1024 Pxl</option>
                     </select>
 
                     <select id="imageFormat" className="border px-2 py-1 rounded">
