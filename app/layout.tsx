@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "ImaginoSkatch",
-  description: "Lightning fast SDXL API demo by fal.ai",
+  description: "ImaginoSkatch",
   authors: [{ name: "fal.ai", url: "https://fal.ai" }],
   metadataBase: new URL("https://fastsdxl.ai"),
   openGraph: {
